@@ -45,11 +45,15 @@ def hex_to_byte(hex: str):
     return byte[hex]
 
 
-# doesn't work for some reason
-def byte_is_binary(byte: str) -> bool:
-    return re.search("\b[01]+\b", byte) is not None
+def byte_is_binary(byte: str) -> bool: 
+    return re.search("^[01]+$", byte) is not None
+
+def character_is_hex(character: str) -> bool: 
+    return re.search("^[A-F0-9]$", character) is not None
+
+def convert_hex_string(): 
+    # takes a string and turns it to binary
 
 if __name__ == '__main__':
-   print(byte_is_binary("0001"))
    print(byte_to_hex("0001"))
    print(hex_to_byte("A"))
