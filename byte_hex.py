@@ -51,7 +51,7 @@ def byte_is_binary(byte: str) -> bool:
 def character_is_hex(character: str) -> bool: 
     return re.search("^[A-F0-9]$", character) is not None
 
-def convert_hex_string(): 
+# def convert_hex_string(): 
     # takes a string and turns it to binary
 
 if __name__ == '__main__':
